@@ -1,0 +1,94 @@
+[gd_scene load_steps=2 format=3 uid="uid://dn4x2j47d1k0b"]
+
+[ext_resource type="Script" path="res://scripts/Combat.gd" id="1_7u6q2"]
+
+[node name="Combat" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7u6q2")
+
+[node name="TopBar" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 1260.0
+offset_bottom = 60.0
+theme_override_constants/separation = 24
+
+[node name="PlayerHPLabel" type="Label" parent="TopBar"]
+layout_mode = 2
+text = "HP: 50 / 50"
+
+[node name="PlayerBlockLabel" type="Label" parent="TopBar"]
+layout_mode = 2
+text = "Block: 0"
+
+[node name="APLabel" type="Label" parent="TopBar"]
+layout_mode = 2
+text = "AP: 3"
+
+[node name="DrawPileLabel" type="Label" parent="TopBar"]
+layout_mode = 2
+text = "Draw: 10"
+
+[node name="DiscardPileLabel" type="Label" parent="TopBar"]
+layout_mode = 2
+text = "Discard: 0"
+
+[node name="EnemyPanel" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 490.0
+offset_top = 120.0
+offset_right = 790.0
+offset_bottom = 220.0
+alignment = 1
+
+[node name="EnemyHPLabel" type="Label" parent="EnemyPanel"]
+layout_mode = 2
+horizontal_alignment = 1
+text = "Enemy HP: 35"
+
+[node name="EnemyIntentLabel" type="Label" parent="EnemyPanel"]
+layout_mode = 2
+horizontal_alignment = 1
+text = "Intent: Defend 10"
+
+[node name="StatusLabel" type="Label" parent="."]
+layout_mode = 2
+offset_left = 20.0
+offset_top = 260.0
+offset_right = 1260.0
+offset_bottom = 320.0
+horizontal_alignment = 1
+text = "Play cards to defeat the Security Bot."
+
+[node name="HandContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 20.0
+offset_top = 430.0
+offset_right = 1260.0
+offset_bottom = 620.0
+alignment = 1
+theme_override_constants/separation = 10
+
+[node name="BottomBar" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 20.0
+offset_top = 650.0
+offset_right = 1260.0
+offset_bottom = 700.0
+alignment = 1
+theme_override_constants/separation = 16
+
+[node name="EndTurnButton" type="Button" parent="BottomBar"]
+layout_mode = 2
+text = "End Turn"
+
+[node name="NewRunButton" type="Button" parent="BottomBar"]
+layout_mode = 2
+text = "New Run"
+visible = false
